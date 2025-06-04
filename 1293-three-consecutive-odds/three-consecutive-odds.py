@@ -1,8 +1,12 @@
 class Solution:
-    def threeConsecutiveOdds(self, a):
-        c = 0
-        for x in a:
-            c = c + 1 if x % 2 !=0 else 0
-            if c == 3:
-                return True
+    def threeConsecutiveOdds(self, arr: List[int]) -> bool:
+        count = 0
+        for x in arr:
+            if x % 2 != 0:
+                count +=1
+                if count == 3:
+                    return True
+            else:
+                count = 0
         return False
+        
